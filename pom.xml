@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ep.mil.microservices.archetypes</groupId>
+    <artifactId>api-ep-cbd-archetype-connector-web-service</artifactId>
+    <version>1.0.0</version>
+    <packaging>maven-archetype</packaging>
+
+    <properties>
+        <encoding>UTF-8</encoding>
+        <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+        <project.resources.sourceEncoding>${encoding}</project.resources.sourceEncoding>
+        <archetype.encoding>${encoding}</archetype.encoding>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <build.archetype-packaging.version>3.1.1</build.archetype-packaging.version>
+    </properties>
+
+    <developers>
+        <developer>
+            <id>dbacilio</id>
+            <email>dbacilio88@outlook.es</email>
+            <name>Chris</name>
+        </developer>
+    </developers>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.archetype</groupId>
+                <artifactId>archetype-packaging</artifactId>
+                <version>${build.archetype-packaging.version}</version>
+            </extension>
+        </extensions>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>bacsystem-central</id>
+            <name>bacsystem-central</name>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>bacsystem-central-snapshot</id>
+            <name>bacsystem-central-snapshot</name>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>bacsystem-central</id>
+            <name>bacsystem-central</name>
+            <url>http://localhost:8081/repository/maven-public/</url>
+        </repository>
+    </repositories>
+
+</project>
